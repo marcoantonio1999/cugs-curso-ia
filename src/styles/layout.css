@@ -1,0 +1,477 @@
+.deck-app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.deck-app.deck-app-syllabus,
+.deck-stage.deck-stage-syllabus,
+.deck-stage-shell.deck-stage-shell-syllabus,
+.slide-shell.slide-shell-syllabus {
+  background: #030303;
+}
+
+.deck-sidebar,
+.deck-stage-shell {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(10, 29, 45, 0.82), rgba(5, 16, 25, 0.92));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.deck-sidebar {
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 28px;
+}
+
+.deck-sidebar-scroll {
+  display: grid;
+  gap: 18px;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.brand-block {
+  position: relative;
+  display: grid;
+  gap: 10px;
+}
+
+.eyebrow,
+.slide-kicker,
+.mini-label,
+.stage-badge {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.slide-kicker,
+.stage-badge {
+  color: var(--accent-cyan-soft);
+}
+
+.mini-label {
+  color: var(--muted);
+}
+
+.hud-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2.2rem);
+  line-height: 0.96;
+}
+
+.hud-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.deck-nav {
+  display: grid;
+  gap: 8px;
+  min-height: 0;
+}
+
+.deck-course-menu {
+  position: relative;
+  margin-top: 4px;
+}
+
+.deck-course-trigger {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(128, 233, 245, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.16s ease,
+    background 0.16s ease,
+    transform 0.16s ease;
+}
+
+.deck-course-trigger:hover,
+.deck-course-trigger.active {
+  border-color: rgba(255, 99, 176, 0.24);
+  background: linear-gradient(90deg, rgba(47, 215, 229, 0.12), rgba(255, 99, 176, 0.12));
+}
+
+.deck-course-trigger.active {
+  transform: translateY(-1px);
+}
+
+.deck-course-trigger-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.deck-course-trigger-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-cyan-soft);
+}
+
+.deck-course-trigger-copy strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.15;
+}
+
+.deck-course-trigger-icon {
+  transition: transform 0.16s ease;
+}
+
+.deck-course-menu.open .deck-course-trigger-icon {
+  transform: rotate(180deg);
+}
+
+.deck-course-picker {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: grid;
+  gap: 8px;
+  max-height: min(58vh, 520px);
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid rgba(128, 233, 245, 0.14);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(8, 22, 34, 0.98), rgba(5, 16, 25, 0.98)),
+    radial-gradient(circle at top right, rgba(187, 61, 124, 0.18), transparent 24%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.34);
+}
+
+.deck-course-button {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease,
+    color 0.16s ease;
+}
+
+.deck-course-button:hover,
+.deck-course-button.active {
+  transform: translateX(4px);
+  border-color: rgba(255, 99, 176, 0.24);
+  background: linear-gradient(90deg, rgba(47, 215, 229, 0.12), rgba(255, 99, 176, 0.12));
+  color: var(--text);
+}
+
+.deck-course-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-cyan-soft);
+}
+
+.deck-course-button strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.1;
+}
+
+.deck-nav-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 14px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease,
+    color 0.16s ease;
+}
+
+.deck-nav-item:hover,
+.deck-nav-item.active {
+  transform: translateX(4px);
+  border-color: rgba(128, 233, 245, 0.24);
+  background: linear-gradient(90deg, rgba(47, 215, 229, 0.16), rgba(187, 61, 124, 0.08));
+  color: var(--text);
+}
+
+.deck-nav-index {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--accent-cyan);
+}
+
+.deck-nav-label {
+  font-size: 0.96rem;
+}
+
+.deck-sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--muted);
+}
+
+.deck-stage {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.deck-floating-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-arrow:disabled {
+  opacity: 0.34;
+  cursor: default;
+}
+
+.deck-stage-shell {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+}
+
+.deck-stage-shell.deck-stage-shell-syllabus {
+  background: #030303;
+}
+
+.slide-panel {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+.slide-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 16px;
+  border-radius: 0;
+  border: 1px solid rgba(128, 233, 245, 0.16);
+  background:
+    linear-gradient(180deg, rgba(7, 19, 29, 0.84), rgba(8, 22, 34, 0.97)),
+    radial-gradient(circle at top right, rgba(187, 61, 124, 0.16), transparent 22%),
+    radial-gradient(circle at top left, rgba(47, 215, 229, 0.12), transparent 25%);
+}
+
+.slide-shell.slide-shell-syllabus {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: #030303;
+}
+
+.slide-header {
+  display: grid;
+  gap: 8px;
+  max-width: 76ch;
+}
+
+.slide-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.45rem, 2.4vw, 2.35rem);
+  line-height: 0.96;
+}
+
+.slide-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding-right: 2px;
+}
+
+.slide-body-scrollable {
+  overflow: hidden;
+}
+
+@media (max-width: 780px) {
+  .deck-app {
+    padding: 0;
+  }
+
+  .slide-shell {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .slide-title {
+    font-size: clamp(1.25rem, 6.2vw, 1.95rem);
+    line-height: 1;
+  }
+
+  .lead {
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-height: 920px) and (min-width: 1181px) {
+  .deck-app {
+    padding: 0;
+  }
+
+  .deck-sidebar {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .deck-course-button,
+  .deck-nav-item {
+    padding: 11px 12px;
+  }
+
+  .hud-title {
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+  }
+
+  .hud-note,
+  .lead,
+  .model-note,
+  .chart-footnote,
+  .signal-caption {
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+
+  .deck-nav-item {
+    padding: 11px 12px;
+  }
+
+  .deck-floating-controls {
+    top: 12px;
+    right: 12px;
+  }
+
+  .slide-panel {
+    padding: 0;
+  }
+
+  .slide-shell {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .slide-title {
+    font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+  }
+}
+
+@media (max-height: 820px) and (min-width: 1181px) {
+  .deck-app {
+    padding: 0;
+  }
+
+  .deck-sidebar {
+    gap: 12px;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .hud-title {
+    font-size: 1.45rem;
+  }
+
+  .deck-nav {
+    gap: 6px;
+  }
+
+  .deck-nav-item {
+    gap: 10px;
+    padding: 10px 11px;
+    border-radius: 16px;
+  }
+
+  .deck-course-button {
+    padding: 10px 11px;
+    border-radius: 16px;
+  }
+
+  .slide-panel {
+    padding: 0;
+  }
+
+  .slide-shell {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .slide-header {
+    gap: 6px;
+  }
+
+  .slide-title {
+    font-size: clamp(1.4rem, 2.1vw, 1.95rem);
+  }
+}

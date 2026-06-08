@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.venv/
+tmp_pdf_pages/
+pdf-page-1.png
+.DS_Store
+Thumbs.db

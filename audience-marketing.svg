@@ -1,0 +1,26 @@
+<svg width="720" height="440" viewBox="0 0 720 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="audBgB" x1="72" y1="44" x2="616" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08131E"/>
+      <stop offset="0.5" stop-color="#0B2231"/>
+      <stop offset="1" stop-color="#07121C"/>
+    </linearGradient>
+    <linearGradient id="audFunnel" x1="204" y1="118" x2="516" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2FD7E5"/>
+      <stop offset="1" stop-color="#FF63B0"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="440" rx="32" fill="url(#audBgB)"/>
+  <circle cx="588" cy="88" r="84" fill="#FF63B0" fill-opacity="0.14"/>
+  <circle cx="118" cy="362" r="116" fill="#2FD7E5" fill-opacity="0.1"/>
+  <rect x="96" y="92" width="530" height="254" rx="30" fill="#07131D" stroke="#7DECF6" stroke-opacity="0.14"/>
+  <path d="M182 128H540L456 202H264L182 128Z" fill="#102738" stroke="url(#audFunnel)" stroke-opacity="0.72" stroke-width="2"/>
+  <path d="M264 202H456L396 268H324L264 202Z" fill="#122C3F" stroke="#7DECF6" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M324 268H396L370 320H350L324 268Z" fill="#142F43" stroke="#FF63B0" stroke-opacity="0.32" stroke-width="2"/>
+  <circle cx="350" cy="356" r="14" fill="#2FD7E5"/>
+  <circle cx="370" cy="356" r="14" fill="#FF63B0" fill-opacity="0.86"/>
+  <rect x="130" y="162" width="98" height="16" rx="8" fill="#163244"/>
+  <rect x="494" y="162" width="98" height="16" rx="8" fill="#163244"/>
+  <rect x="154" y="234" width="72" height="14" rx="7" fill="#122C3F"/>
+  <rect x="496" y="234" width="72" height="14" rx="7" fill="#122C3F"/>
+</svg>

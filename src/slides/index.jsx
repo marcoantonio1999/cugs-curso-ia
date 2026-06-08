@@ -6,6 +6,8 @@ import ValueChainSlide from "./ValueChainSlide";
 import CasesSlide from "./CasesSlide";
 import RoadmapSlide from "./RoadmapSlide";
 import GrowthSlide from "./GrowthSlide";
+import AIHistoryBasicsSlide from "./AIHistoryBasicsSlide";
+import WordTokenSlide from "./WordTokenSlide";
 import CourseSyllabusSlide from "./CourseSyllabusSlide";
 import SessionHeroSlide from "./SessionHeroSlide";
 import CourseCardGridSlide from "./CourseCardGridSlide";
@@ -241,7 +243,7 @@ const ClassOneSyllabus = () => (
   <CourseSyllabusSlide
     activeClass={1}
     sessionTitle="Clase 1 · Introducción práctica a la IA"
-    sessionSummary="Antes de entrar a herramientas, el alumno necesita ver la ruta completa: donde empieza el curso, como avanzara y que resultado final se espera."
+    sessionSummary="Antes de entrar a herramientas, conviene ver la ruta completa: donde empieza el curso, como avanzara y que resultado final se espera."
   />
 );
 
@@ -3440,7 +3442,7 @@ const classDecks = [
     label: "Clase 1",
     sidebarTitle: "Introducción práctica a la IA",
     sidebarNote: "Panorama general, objetivos, modulos y sistema de valor del curso.",
-    sections: ["Temario", "Bienvenida", "Contexto", "Perfil", "Resultados", "Ruta", "Sistema", "Casos", "Cierre"],
+    sections: ["Temario", "Bienvenida", "Contexto", "Historia", "Tokens", "Perfil", "Resultados", "Ruta", "Sistema", "Casos", "Cierre"],
     slides: [
       {
         kicker: "01 · Temario",
@@ -3461,6 +3463,18 @@ const classDecks = [
         Component: GrowthSlide,
       },
       {
+        kicker: "04 Â· Historia",
+        title: "Una historia breve para ordenar los conceptos antes de usar herramientas.",
+        subtitle: "IA, ML, deep learning, generativa y LLM se entienden mejor cuando se ven como capas relacionadas.",
+        Component: AIHistoryBasicsSlide,
+      },
+      {
+        kicker: "04 Â· Tokens",
+        title: "Antes de escribir prompts, conviene ver como la IA cuenta el texto.",
+        subtitle: "Este laboratorio permite escribir en vivo y observar cuantos tokens consume cada palabra dentro del prompt.",
+        Component: WordTokenSlide,
+      },
+      {
         kicker: "04 · Perfil",
         title: "A quien le sirve este diplomado.",
         subtitle: "El curso esta pensado para quienes toman decisiones, analizan datos o necesitan escalar procesos con criterio.",
@@ -3468,7 +3482,7 @@ const classDecks = [
       },
       {
         kicker: "05 · Resultado",
-        title: "Que deberia poder hacer el alumno al terminar.",
+        title: "Que deberia quedar claro al terminar.",
         subtitle: "La meta es tomar mejores decisiones con datos, automatizacion y modelos aplicados.",
         Component: OutcomesSlide,
       },

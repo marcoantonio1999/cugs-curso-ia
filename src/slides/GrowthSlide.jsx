@@ -173,7 +173,7 @@ export default function GrowthSlide() {
         <div className="company-wall">
           <div className="company-wall-head">
             <Building2 size={16} />
-            <span>{accentText("Empresas que los alumnos reconocen")}</span>
+            <span>{accentText("Empresas reconocibles")}</span>
           </div>
 
           <div className="logo-company-grid">

@@ -49,7 +49,7 @@ export default function ModulesSlide() {
         </div>
         <p>
           {accentText(
-            "Durante el diplomado el alumno construye una propuesta que conecta datos, modelo aplicado y recomendacion estrategica para marketing, ventas o experiencia del cliente."
+            "Durante el diplomado se construye una propuesta que conecta datos, modelo aplicado y recomendacion estrategica para marketing, ventas o experiencia del cliente."
           )}
         </p>
       </motion.article>

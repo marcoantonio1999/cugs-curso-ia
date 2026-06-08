@@ -24,10 +24,10 @@ export default function IntroSlide() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.34 }}
       >
-        <p className="intro-overline">Clase 01 · Apertura del diplomado</p>
+        <p className="intro-overline">Clase 01 · Introducción práctica a la IA</p>
         <div className="intro-word-stack">
           {[
-            ["Diplomado", "ia aplicada a negocios"],
+            ["Introducción", "práctica a la IA"],
             ["Marketing", "datos y decisiones"],
             ["Prediccion", "leer antes de ejecutar"],
             ["Ventaja", "automatizacion con criterio"],

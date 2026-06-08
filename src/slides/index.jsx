@@ -240,7 +240,7 @@ import {
 const ClassOneSyllabus = () => (
   <CourseSyllabusSlide
     activeClass={1}
-    sessionTitle="Clase 1 · Apertura del diplomado"
+    sessionTitle="Clase 1 · Introducción práctica a la IA"
     sessionSummary="Antes de entrar a herramientas, el alumno necesita ver la ruta completa: donde empieza el curso, como avanzara y que resultado final se espera."
   />
 );
@@ -3406,7 +3406,7 @@ const ClassThirtyTwoClosing = () => (
 
 const CourseOutlineOverview = () => (
   <CourseSyllabusSlide
-    sessionTitle="Indice general del diplomado"
+    sessionTitle="Introducción práctica a la IA"
     sessionSummary="Esta seccion concentra la ruta completa del curso para que no se repita dentro de cada clase y el alumno pueda revisarla cuando quiera."
   />
 );
@@ -3438,20 +3438,20 @@ const classDecks = [
   {
     id: "class-1",
     label: "Clase 1",
-    sidebarTitle: "Apertura del diplomado",
+    sidebarTitle: "Introducción práctica a la IA",
     sidebarNote: "Panorama general, objetivos, modulos y sistema de valor del curso.",
     sections: ["Temario", "Bienvenida", "Contexto", "Perfil", "Resultados", "Ruta", "Sistema", "Casos", "Cierre"],
     slides: [
       {
         kicker: "01 · Temario",
-        title: "Como vamos a avanzar en todo el diplomado.",
+        title: "Como vamos a avanzar en Introducción práctica a la IA.",
         subtitle: "La primera vista del curso ya muestra la ruta completa para que el grupo entienda el orden del aprendizaje.",
         Component: ClassOneSyllabus,
       },
       {
         kicker: "02 · Bienvenida",
-        title: "IA aplicada a negocios y marketing.",
-        subtitle: "Apertura del diplomado: por que este curso existe, que problema resuelve y como se va a trabajar.",
+        title: "Introducción práctica a la IA.",
+        subtitle: "Apertura del curso: por que existe, que problema resuelve y como se va a trabajar.",
         Component: IntroSlide,
       },
       {
@@ -5271,13 +5271,13 @@ export const courseDecks = [
   {
     id: "course-outline",
     label: "Indice",
-    sidebarTitle: "Indice general",
-    sidebarNote: "Ruta completa del diplomado para revisar fases, clases y progreso sin repetir el temario dentro de cada sesion.",
+    sidebarTitle: "Introducción práctica a la IA",
+    sidebarNote: "Ruta completa del curso para revisar fases, clases y progreso sin repetir el temario dentro de cada sesion.",
     sections: ["Ruta general"],
     slides: [
       {
         kicker: "01 · Ruta general",
-        title: "Como se organiza todo el diplomado de principio a fin.",
+        title: "Introducción práctica a la IA.",
         subtitle: "Esta seccion deja visible el indice completo del curso en un solo lugar para que no se repita dentro de las 32 clases.",
         Component: CourseOutlineOverview,
       },
